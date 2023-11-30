@@ -1,0 +1,70 @@
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+
+int main(){
+    int i, j;
+    int L, C;
+
+    cout << "digite o tamanho das matrizes: " << endl;
+    cout << "linha: ";
+    cin >> L;
+    cout << "coluna: ";
+    cin >> C;
+
+    int M1[L][C] = {0};
+    int M2[L][C] = {0};
+    int M3[L][C] = {0};
+
+    cout << "digite a primeira matriz:" << endl;
+    for(i=0 ; i<L ; i++){
+        for(j=0; j<C; j++){
+            cin >> M1[j][i];
+        }
+    }
+
+    cout << "digite a segunda matriz:" << endl;
+    for(i=0 ; i<L ; i++){
+        for(j=0; j<C; j++){
+            cin >> M2[j][i];
+        }
+    }
+
+    for(i=0 ; i<L ; i++){
+        for(j=0; j<C; j++){
+            M3[j][i] = M1[j][i] + M2[j][i];
+        }
+    }
+
+    system("clear||cls");
+
+    cout << "A matriz: " << endl;
+
+    for(i=0 ; i<L ; i++){
+        for(j=0; j<C; j++){
+            cout << M1[j][i];
+            cout << " ";
+        }
+        cout << endl;
+    }
+
+    cout << "somada com a matriz: " << endl;
+
+    for(i=0 ; i<L ; i++){
+        for(j=0; j<C; j++){
+            cout << M2[j][i];
+            cout << " ";
+        }
+        cout << endl;
+    }
+
+    cout << "eh igual a matriz: " << endl;
+
+    for(i=0 ; i<L ; i++){
+        for(j=0; j<C; j++){
+            cout << M3[j][i];
+            cout << " ";
+        }
+        cout << endl;
+    }
+}
